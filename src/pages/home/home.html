@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar color="primary" navbar-inverse navbar-fixed-top>
+    <ion-buttons left >
+      <button ion-button icon-only menuToggle >
+        <ion-icon name="menu"  ></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      System Catlaogue
+    </ion-title>
+  </ion-navbar>
+
+  
+</ion-header>
+
+
+<ion-menu [content]="content" >
+
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item [navPush] = "firstPage">
+        Home
+      </button>
+      <button ion-item >
+        Friends
+      </button>
+      <button ion-item (click)="openPage(eventsPage)">
+        Events
+      </button>
+      <button ion-item menuToggle>
+        Close Menu
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+
+<ion-content padding>
+
+      
+
+  The world is your oyster.
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p>
+  <button [navPush]="firstPage">hey</button>
+
+
+</ion-content>
